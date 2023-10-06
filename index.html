@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1 Racer API</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./static/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <img src="./static/images/f1-logo.png" alt="F1 Logo" id="f1-logo">
+     <form id="f1-form">
+
+      <label for="season">Season</label>
+      <input type="number" id="season" name="season" min="2020" max="2023" required>
+      <label for="round">Round</label>
+      <input type="number" id="round" name="round" min="1" max="23" required>
+      <button type="submit">Get Driver Standings</button>
+    </form>
+    <table id="f1-table">
+      <thead>
+          <tr>
+              <th>Position</th>
+              <th>Name</th>
+              <th>Team</th>
+              <th>Points</th>
+          </tr>
+      </thead>
+      <tbody>
+          <!-- Rows will be inserted here by your script -->
+      </tbody>
+  </table>
+  
+    </main>
+  </body>
+</html>
