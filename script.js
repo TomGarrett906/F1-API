@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
   function createTable(data) {
        console.log(data) 
       const tableBody = document.querySelector('#f1-table tbody');
-      // tableBody.innerHTML = '';
+      tableBody.innerHTML = '';
       if (data.MRData.StandingsTable.StandingsLists.length > 0) {
           const standings = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
           
-          standings.slice(0, 7).forEach((driver, i) => {
+          standings.slice(0, 20).forEach((driver, i) => {
               const row = tableBody.insertRow();
               row.insertCell(0).textContent = i + 1;
               row.insertCell(1).textContent = `${driver.Driver.givenName} ${driver.Driver.familyName}`;
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const row = tableBody.insertRow();
           const cell = row.insertCell(0);
           cell.setAttribute('colspan', '4');
-          cell.textContent = 'Bad Request';
+          cell.textContent = 'Grand Prix Doesn\'t Exist';
       }
   }
 }); 

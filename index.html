@@ -7,16 +7,18 @@
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./static/styles.css" />
   </head>
+  <header>
+    <img src="./static/images/f1-logo.png" alt="F1 Logo" id="f1-logo">
+    <h1>Formula One Driver Standings (1950-2023)</h1>
+  </header>
   <body>
     <main class="container">
-      <img src="./static/images/f1-logo.png" alt="F1 Logo" id="f1-logo">
      <form id="f1-form">
-
-      <label for="season">Season</label>
-      <input type="number" id="season" name="season" min="2020" max="2023" required>
-      <label for="round">Round</label>
+      <label for="season">Season :</label>
+      <input type="number" id="season" name="season" min="1950" max="2023" required>
+      <label for="round">Round :</label>
       <input type="number" id="round" name="round" min="1" max="23" required>
-      <button type="submit">Get Driver Standings</button>
+      <button type="submit">Fetch Driver Standings</button>
     </form>
     <table id="f1-table">
       <thead>
@@ -28,7 +30,7 @@
           </tr>
       </thead>
       <tbody>
-          <!-- Rows will be inserted here by your script -->
+
       </tbody>
   </table>
   
