@@ -1,7 +1,11 @@
 body {
+  display: flex;
+  flex-direction: column;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
+  align-items: center;
   background-color: #1a1a1a;
+  justify-content: space-between;
 }
 
 header {
@@ -11,6 +15,7 @@ header {
   border-radius: 4px;
   text-align: center;
   font-size: 10px;
+  min-width: 90%;
 }
 
 .container {
@@ -48,14 +53,18 @@ header {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #e20800cf;
-  color: #fff;
+  background-color: #fff;
+  color: #E20600;
+  border: 6px double #E20600;
+  font-weight: 600;
 }
 
 #f1-form button:hover {
-  background-color: #E20600;
+  background: #E20600;
+  border: 6px double #fff;
   color: #fff;
   scale: 105%;
+  transition: 1s;
 }
 
 #f1-table {
@@ -81,4 +90,50 @@ header {
   width: 250px; 
   display: block; 
   margin: 0 auto;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  background: #E20600;
+  max-width: none; 
+  max-height: none;
+  height: 40px;
+  justify-content: center;
+  border: 6px double #fff;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 250px;
+  position: sticky;
+  bottom: 10px;
+  /* z-index: -100; */
+}
+
+footer:hover {
+  transition: 1000ms;
+}
+
+.made-by,
+.author {
+  font-size: 0.9rem;
+}
+
+.made-by {
+  cursor: default;
+}
+
+.author {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.author:hover {
+  color: #1a1a1a;;
+  transition: 1000ms;
+  scale: 110%;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
 }
